@@ -16,7 +16,9 @@ Coregen
 
 
 
-Nothin' fancy
+Nothin' fancy here yet.
+
+This library does not support py2
 
 
 * Free software: MIT license
