@@ -1,3 +1,4 @@
+from collections.abs import MutableMapping
 import json
 
 class ReadOnlyModification(Exception):
@@ -62,23 +63,38 @@ class RegexDict(dict):
         return super().__getitem__(regex_key)
 
 
-class RegexCollection:
+class IndexedCollection(dict):
     """
-    This class is ment to be used as a collection of regular expressions.
-    instantiaion - list or *args - will accept a list of regex strings.
-
-    obj = Object([r'asd', r'dsa'])
-    y = obj['asd']
-    print y
-    asd
-
-    Time value -> instantiation
-
-    Object(regex)(text) -> matches
-    Object(regex)(text) -> obj.match.key -> value
-
-    obj(text) -> obj.match.url
-                 obj.match.picture
+    This class provides a dict-like object with key dot access.
+    each key has a __getitem__ method and will return a tuple
+    with key, value and index.
 
     """
-    pass
+
+
+class RegexMapping(MutableMapping):
+    """
+    This implementation will behave the following way
+
+    >>> d = RegexMapping({'a': '.*'})
+    >>> d.process_stream('very text\nalot nice\nwow', by_line=True)
+    >>> d.a
+    {'a':['very text, 'alot nice', 'wow']}
+    >>> d.update(b='alot.*')
+    >>> d.process_stream('very text\nalot nice\nwow', by_line=True)
+    >>> d.b
+    {'b': ['alot nice']}
+
+    """
+
+    def __init__(self, mapping, **kwargs):                            
+        try:                                                          
+            self.__dict__.update(kwargs)
+            self.__dict__.update(
+                {k: v for k, v in mapping}
+                ) 
+        except TypeError:
+            raise
+        except ValueError:
+            self.__dict__.update(mapping)
+        
