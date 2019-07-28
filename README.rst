@@ -16,7 +16,8 @@ Coregen
 
 
 
-Nothin' fancy here yet.
+This distribution's development is in alpha state.
+Files location / package structure is prone to changes until v1.0.0 is released.
 
 This library does not support py2
 
