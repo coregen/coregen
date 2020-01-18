@@ -11,11 +11,11 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = []
 
-setup_requirements = [ ]
+setup_requirements = []
 
-test_requirements = [ ]
+test_requirements = []
 
 setup(
     author="Barak Avrahami",
@@ -30,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Nothin' fancy",
+    description="Library for generic functions",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
@@ -42,7 +42,7 @@ setup(
     python_requires='>3.5',
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/andecy64/coregen',
+    url='https://github.com/coregen/coregen',
     version='0.1.0',
     zip_safe=False,
 )
