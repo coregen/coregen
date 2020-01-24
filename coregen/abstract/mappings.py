@@ -3,9 +3,6 @@ TODO: Module docstirng
 """
 
 import json
-import re
-
-from coregen.exceptions import ReadOnlyModification
 
 
 class JSONDict(dict):

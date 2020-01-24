@@ -34,7 +34,7 @@ class DataUrl:
         url_regex = re.compile(
                 'data:(?P<mediatype>[a-z-]+/[a-z-]+){0,1}'
                 '(?P<base64>;base64){0,1},'
-                '(?P<data>[a-zA-Z0-9-._~%:;,/?#\[\]@!$&\'()*+,=]*)'
+                '(?P<data>[a-zA-Z0-9-._~%:;,/?#[]@!$&\'()*+,=]*)'
             )
         match = url_regex.search(url)
         if not match:
