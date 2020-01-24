@@ -7,6 +7,7 @@ Coregen
         :target: https://pypi.python.org/pypi/coregen
 
 .. image:: https://img.shields.io/github/workflow/status/coregen/coregen/Unit%20tests
+        :target: https://github.com/coregen/coregen/actions?query=workflow%3A%22Unit+tests%22
 
 .. image:: https://readthedocs.org/projects/coregen/badge/?version=latest
         :target: https://coregen.readthedocs.io/en/latest/?badge=latest
