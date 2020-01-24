@@ -6,8 +6,7 @@ Coregen
 .. image:: https://img.shields.io/pypi/v/coregen.svg
         :target: https://pypi.python.org/pypi/coregen
 
-.. image:: https://img.shields.io/travis/andecy64/coregen.svg
-        :target: https://travis-ci.org/andecy64/coregen
+.. image::  https://img.shields.io/github/workflow/status/coregen/coregen/Unit%20tests
 
 .. image:: https://readthedocs.org/projects/coregen/badge/?version=latest
         :target: https://coregen.readthedocs.io/en/latest/?badge=latest
