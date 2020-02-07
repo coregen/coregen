@@ -82,7 +82,13 @@ release: dist ## package and upload a release
 bump-patch:
 	bump2version patch
 
-release-patch: dist
+bump-minor:
+	bump2version minor
+
+push-tags-master:
+	git push origin master --tags
+
+release-patch: bump-patch push-tags-master release
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
