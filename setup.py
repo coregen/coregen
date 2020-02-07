@@ -4,6 +4,7 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+from coregen import __version__ as version
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -43,6 +44,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/coregen/coregen',
-    version='0.1.1',
+    version=version,
     zip_safe=False,
 )

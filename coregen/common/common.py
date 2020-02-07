@@ -16,3 +16,7 @@ def enter_directory_ctx(directory):
         yield
     finally:
         os.chdir(current_directory)
+
+
+def flatten_2d_list(l):
+    return [sub_item for item in l for sub_item in item]
